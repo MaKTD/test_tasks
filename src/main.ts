@@ -5,6 +5,9 @@ import { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { BotModule } from './bot_module';
 import { botConfig, loggerConfig } from './config';
 
+// TODO: implemnet services and repos
+// TODO: tests
+
 @Module({
   imports: [
     ConfigModule.forRoot({

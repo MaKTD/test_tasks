@@ -30,3 +30,13 @@ export const botConfig = registerAs('bot', () => {
     testEnv,
   };
 });
+
+export const unoConfig = registerAs('uno', () => {
+  const maxRoomsForOwner = ev.get('UNO_MAX_ROOMS_FOR_OWNER').default('5').asIntPositive();
+  const maxRoomParticipants = ev.get('MAX_ROOM_PARTICIPANTS').default('2').asIntPositive();
+
+  return {
+    maxRoomsForOwner,
+    maxRoomParticipants,
+  };
+});
