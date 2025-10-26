@@ -2,8 +2,8 @@ import { MainLoggerModule, startApp } from '@maktd/naddons';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { NestFastifyApplication } from '@nestjs/platform-fastify';
-import { BotModule } from './bot_module';
 import { botConfig, loggerConfig } from './config';
+import { UnoModule } from './uno/uno.module';
 
 // TODO: implemnet services and repos
 // TODO: tests
@@ -18,7 +18,7 @@ import { botConfig, loggerConfig } from './config';
       ],
     }),
     MainLoggerModule.forRoot(loggerConfig()),
-    BotModule,
+    UnoModule,
   ],
 })
 class RootModule {}
